@@ -32,20 +32,20 @@ body {
     align-items: center;
     background-image: url('eburgh.JPG');
     background-size: cover;
-    color: #ffffff;
-    height: 400px;
+    color: wheat;
+    height: 500px;
   }
   
   .jumbotron h2 {
     font-size: 60px;
     font-weight: 700;
     margin: 0;
-    color: #fff;
+    color: wheat;
   }
   
   .jumbotron h3 {
     margin: 0 0 20px;
-    color: #fff;
+    color: wheat;
   }
   
   section .row img {
