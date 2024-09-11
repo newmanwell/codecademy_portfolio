@@ -30,7 +30,7 @@ body {
   .jumbotron {
     display: flex;
     align-items: center;
-    background-image: url('eburgh.JPG');
+    background-image: url('images/eburgh.JPG');
     background-size: cover;
     color: wheat;
     height: 500px;
@@ -87,6 +87,10 @@ body {
   
   figure {
     margin-bottom: 30px;
+  }
+
+  .font-weight {
+    font-weight: 700;
   }
   
   footer {
