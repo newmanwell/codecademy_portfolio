@@ -113,3 +113,11 @@ body {
     list-style: none;
   }
   
+  @media (max-width: 600px) {
+    nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  }
