@@ -16,6 +16,10 @@ body {
     font-weight: 700;
     margin: 0;
   }
+
+  h5 {
+    text-align: center;
+  }
   
   nav {
     display: flex;
