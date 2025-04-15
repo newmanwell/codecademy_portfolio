@@ -1,5 +1,5 @@
 body {
-    font-family: Roboto, sans-serif;
+    font-family: "Open Sans", sans-serif;
     background-image: url('https://content.codecademy.com/courses/learn-css-selectors-visual-rules/hypnotize_bg.png');
   }
   
@@ -54,7 +54,7 @@ body {
   }
   
   .jumbotron h3 {
-    margin: 0 0 20px;
+    margin: 0 0 10px;
     color: wheat;
   }
   
