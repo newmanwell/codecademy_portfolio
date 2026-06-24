@@ -61,6 +61,14 @@ body {
     margin: 0 0 30px;
     width: 100%;
   }
+
+  .col-sm-4 {
+    background-color: aliceblue;
+    border: solid;
+    border-color: #2a70e0;
+    border-width: 1px;
+    border-radius: 5px;
+  }
   
   .col-md-6 {
     margin: 0 0 30px;
@@ -101,6 +109,10 @@ body {
 
   .font-weight {
     font-weight: 700;
+  }
+
+  .font-weight-bold {
+    text-align: center;
   }
   
   footer {
