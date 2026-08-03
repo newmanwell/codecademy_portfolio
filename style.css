@@ -1,6 +1,11 @@
+html {
+  interpolate-size: allow-keywords;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     background-image: url('https://content.codecademy.com/courses/learn-css-selectors-visual-rules/hypnotize_bg.png');
+    width: 100vw;
   }
   
   header {
@@ -20,21 +25,98 @@ body {
   h5 {
     text-align: center;
   }
-  
+
   nav {
     display: flex;
-    justify-content: flex-end;
-  }
-  
-  a {
-    margin: 5px;
   }
 
-  nav a+a::before {
-    content: '|';
-    padding-left: 0px;
-    padding-right: 20px;
+  @media (min-width: 1200px) {
+    nav {
+      width: fit-content;
+      margin: 3rem auto;
+      background: hsl(0 0% 0% /0.8);
+      padding: 8px;
+      border-radius: 8px;
+
+      isolation: isolate;
+
+      anchor-name: --hovered-link;
+
+      .nav-li:hover {
+        anchor-name: --hovered-link;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        height: 5px;
+        background: cornflowerblue;
+
+        border-radius: 10px;
+
+        position-anchor: --hovered-link;
+
+        transition: 1000ms
+          linear(
+          0,
+          0.029 1.6%,
+          0.123 3.5%,
+          0.651 10.6%,
+          0.862 14.1%,
+          1.002 17.7%,
+          1.046 19.6%,
+          1.074 21.6%,
+          1.087 23.9%,
+          1.086 26.6%,
+          1.014 38.5%,
+          0.994 46.3%,
+          1
+        );
+      }
+
+      &:has(a:hover)::after {
+        top: anchor(bottom);
+        left: anchor(left);
+        right: anchor(right);
+        bottom: anchor(bottom);
+      }
+
+      @supports (corner-shape: squircle) {
+        border-radius: 24px;
+        corner-shape: squircle;
+      }
+
+      > .nav-ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+      }
+
+      a,
+      a:hover,
+      a:visited,
+      a:active {
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: white;
+      }
+    }
+}
+
+@media (max-width: 1199px) {
+  .nav-ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
   }
+
+  .nav-li {
+    margin: 10px;
+  }
+}
   
   .jumbotron {
     display: flex;
@@ -134,16 +216,20 @@ body {
     height: 70px;
   }
   
-  @media (max-width: 600px) {
+  /* @media (max-width: 990px) {
     nav {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
     }
+
+    body {
+      width: 100vw;
+    }
   }
 
-  @media (max-width: 490px) {
+  @media (max-width: 518px) {
     .container-index {
       height: 100%;
     }
@@ -153,7 +239,7 @@ body {
     .jumbotron {
       height: 650px;
     }
-  }
+  } */
 
   /* Nav Transition */
 
