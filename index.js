@@ -21,3 +21,20 @@ if (navToggle && navMenu) {
     }
   });
 }
+// light/dark theme toggle (initial theme is set by the inline script in <head>)
+const themeToggle = document.querySelector('.theme-toggle');
+
+const updateThemeLabel = () => {
+  const isDark = document.documentElement.dataset.theme === 'dark';
+  themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+};
+
+if (themeToggle) {
+  updateThemeLabel();
+  themeToggle.addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem('theme', next);
+    updateThemeLabel();
+  });
+}

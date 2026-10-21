@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="style.css" type="text/css" rel="stylesheet">
+    <script>document.documentElement.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');</script>
     <script src="./index.js" defer></script>
   </head>
   <body>
@@ -29,6 +30,7 @@
                     <li class="nav-li"><a href="experience.html">Projects</a></li>
                     <li class="nav-li"><a href="contactme.html">Contact</a></li>
                     <li class="nav-li"><a href="https://docs.google.com/document/d/1_h05Bno84GDHojhsgULxpYqxp7FcLHZ28TAfUS2Se6w/edit?tab=t.0" target="_blank">Resume</a></li>
+                    <li class="nav-li"><button type="button" class="theme-toggle" aria-label="Switch to dark mode"></button></li>
                 </ul>
             </nav>
         </div>

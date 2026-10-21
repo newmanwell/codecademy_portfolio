@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script>document.documentElement.dataset.theme = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');</script>
     <script src="./index.js" defer></script>
   </head>
   <body>
@@ -29,6 +30,7 @@
                     <li class="nav-li"><a href="experience.html">Projects</a></li>
                     <li class="nav-li"><a href="contactme.html">Contact</a></li>
                     <li class="nav-li"><a href="https://docs.google.com/document/d/1_h05Bno84GDHojhsgULxpYqxp7FcLHZ28TAfUS2Se6w/edit?tab=t.0" target="_blank">Resume</a></li>
+                    <li class="nav-li"><button type="button" class="theme-toggle" aria-label="Switch to dark mode"></button></li>
               </ul>
             </nav>
         </div>
@@ -53,7 +55,7 @@
               I remember my first time programming a computer to talk back to me on an old school Tandy (bring back RadioShack!). 
               Coding sure has come a long way since those days. This journey to become a developer has been a rewarding challenge.</p>
               <p>
-                <span style="background-color: aqua;">SUPER AWESOME UPDATE!!</span> I have started a project for a billing tracking tool that my team at work will use. 
+                <span style="background-color: yellow; color:black">SUPER AWESOME UPDATE!!</span> I have started a project for a billing tracking tool that my team at work will use. 
                 My team often operates independently from other departments in the company. 
                 We needed a solution to keep track of the customers we are working on so that we ultimately bill them for our services.
                 It's a work in progress but check out the GitHub repo <a href="https://github.com/newmanwell/the-billing-quest" target="_blank">HERE</a>.
